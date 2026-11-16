@@ -1,0 +1,47 @@
+---
+description: Regras do site Shenia Karlsson (tema WordPress de blocos)
+alwaysApply: true
+---
+
+# Site Shenia Karlsson · regras do projeto
+
+## Contexto
+- Site da psicóloga Shenia Karlsson (sheniakarlsson.com). Público: mulheres de alta performance. Oferta principal: terapia e mentoria online. Segunda frente: Empresas e marcas.
+- A maioria das visitas vem do Instagram, pelo celular. Desenhe e teste primeiro em 390 px.
+- Fontes de verdade: a pasta docs/ (prompts da V11, tipografia, Empresas e marcas) e o Figma (arquivo 7yMlww4Z2KaRUg0S1qhI3s, página "08 · V11 · Alta performance").
+
+## Stack
+- WordPress 7.x com o tema de blocos próprio em wp-content/themes/shenia. Sem Elementor, page builder ou ACF.
+- Seções feitas com blocos nativos e registradas como patterns em patterns/. A Shenia edita os textos no editor.
+- Plugins só com aprovação do Felipe, com justificativa.
+- Só o tema, .cursor e docs/ vão para o git. Nunca editar o core do WordPress.
+
+## Onde fica cada coisa no tema
+- theme.json: cores, fontes, escala tipográfica (papéis: nome, abertura, manifesto, secao, item, subitem, intro, corpo-g, corpo, legenda, sobretitulo) e espaçamentos.
+- assets/css/base.css: só o que o theme.json não cobre (foco, variações is-style-*, faixa de feixes, linhas).
+- inc/precos.php: fonte única dos valores. Use a fonte de Block Bindings "shenia/preco" ou o shortcode [preco chave="..."]. Nunca escreva um valor solto numa página.
+- inc/estilos-de-bloco.php: variações (fundo-ouro, fundo-areia, fundo-areia-claro, fundo-oliva, fundo-grafite, sobretitulo, marcador, linhas, secundario, link).
+- parts/: cabeçalho e rodapé. templates/: page, page-sem-titulo (páginas feitas de seções), front-page, index, 404.
+
+## Design
+- Família única: Barlow 400, 500 e 600, servida pelo tema.
+- Cores, tamanhos e espaçamentos só por tokens. Nenhum valor solto no CSS.
+- Caixa alta só em sobretítulo, manifesto (Sobre) e logo.
+- Sem caixas: listas com linhas divisórias.
+- Botões em pílula. Sobre fundo oliva ou grafite, o botão principal fica claro.
+
+## Conteúdo
+- Nenhum WhatsApp, em lugar nenhum.
+- Valores em euro e real, lado a lado.
+- Marcadores (sugestão, confirmar, aguardando material) usam o parágrafo com estilo "Marcador de revisão", nunca dentro de títulos.
+- Sem travessão (—) nos textos.
+- Fora de produção, o site fica com noindex (inc/setup.php, por WP_ENVIRONMENT_TYPE).
+
+## Acessibilidade (obrigatório)
+- Contraste de 4,5:1 para texto e 3:1 para controles. Foco visível. Navegação completa pelo teclado.
+- Um h1 por página, sem pular níveis. alt em todas as imagens. Áreas de toque de pelo menos 44 px. Respeitar prefers-reduced-motion.
+
+## Forma de trabalhar
+- Antes de editar, diga em 3 a 5 linhas o que vai fazer e em quais arquivos.
+- Ao terminar, liste o que mudou, como testar e o que ficou pendente.
+- Nunca invente texto, valor ou dado da Shenia. Se faltar, use o marcador.

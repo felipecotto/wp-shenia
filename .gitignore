@@ -1,0 +1,12 @@
+# Só o tema, as regras do Cursor e a documentação entram no git.
+/*
+!/.gitignore
+!/.cursor/
+!/docs/
+!/wp-content/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/shenia/
+.DS_Store
+Thumbs.db
