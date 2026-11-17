@@ -1,6 +1,7 @@
 # Só o tema, as regras do Cursor e a documentação entram no git.
 /*
 !/.gitignore
+!/.gitattributes
 !/.cursor/
 !/docs/
 !/wp-content/
